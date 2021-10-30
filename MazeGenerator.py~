@@ -1,0 +1,19 @@
+from UnionFind import UnionFind
+import random
+
+class Maze:
+    def __init__(self, rows, cols):
+        self.matrix = []
+        self.coorStack = []
+
+        for i in range(rows):
+            self.matrix.append([0] * cols)
+            for j in range(cols):
+                self.coorStack.append((i, j))
+
+        random.shuffle(self.coorStack)
+        
+        print(self.matrix)
+        print(self.coorStack)
+
+Maze(5, 5)
